@@ -2,7 +2,7 @@ package com.example.SpringCore.Couple.LooseCoupling;
 
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("cat")
 public class Cat implements Animal{
 
     @Override
