@@ -1,4 +1,13 @@
-package com.example.SpringCore.Couple.TightCoupling;
+package com.example.SpringCore.Couple.LooseCoupling;
 
-public class Dog {
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+@Primary
+@Component
+public class Dog implements Animal{
+
+    @Override
+    public void play() {
+        System.out.println("Dog is playing");
+    }
 }

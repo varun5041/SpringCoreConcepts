@@ -1,4 +1,4 @@
-package com.example.SpringCore.Couple;
+package com.example.SpringCore.Couple.LooseCoupling;
 
 interface Animal {
     void play();

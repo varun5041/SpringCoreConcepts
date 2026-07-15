@@ -1,6 +1,12 @@
-package com.example.SpringCore.Couple;
+package com.example.SpringCore.Couple.LooseCoupling;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Person {
+
+    @Autowired
     Animal animal;
 
     public Person(Animal animal) {

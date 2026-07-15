@@ -1,18 +1,39 @@
 package com.example.SpringCore;
 
-import com.example.SpringCore.Couple.Person;
+import Test.test;
+import com.example.SpringCore.Couple.LooseCoupling.Cat;
+import com.example.SpringCore.Couple.LooseCoupling.Dog;
+import com.example.SpringCore.Couple.LooseCoupling.Person;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"Test","com.example.SpringCore"})
 public class SpringCoreApplication {
 
 	public static void main(String[] args) {
 
 
-		SpringApplication.run(SpringCoreApplication.class, args);
-        Person p = new Person();
-        p.playWithAnimal();
+		ApplicationContext context = SpringApplication.run(SpringCoreApplication.class, args);
+
+//        Person p = new Person(new Dog());
+//        Person p2 = new Person(new Cat());
+//
+//        p.playWithAnimal();
+//        p2.playWithAnimal();
+
+        /// ////////////////////////////////////
+
+        Person personBean = context.getBean(Person.class);
+        personBean.playWithAnimal();
+
+
+        test testBean= context.getBean(test.class);
+        testBean.HelloPrint();
+
+
 
 	}
 
