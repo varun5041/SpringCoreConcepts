@@ -7,13 +7,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Person {
 
-
+    @Autowired
+    @Qualifier("cat")
     Animal animal;
 
-    @Autowired
-    public Person( @Qualifier("dog") Animal animal) {
-        this.animal = animal;
-    }
+//    @Autowired
+//    public Person( @Qualifier("dog") Animal animal) {
+//        this.animal = animal;
+//    }
 
     public void playWithAnimal(){
         animal.play();
