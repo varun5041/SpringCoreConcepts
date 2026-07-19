@@ -6,6 +6,7 @@ import com.example.SpringCore.Couple.LooseCoupling.Animal;
 import com.example.SpringCore.Couple.LooseCoupling.Cat;
 import com.example.SpringCore.Couple.LooseCoupling.Dog;
 import com.example.SpringCore.Couple.LooseCoupling.Person;
+import com.example.SpringCore.Couple.Scope.Pepsi;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -40,11 +41,21 @@ public class SpringCoreApplication {
 //        test testBean= context.getBean(test.class);
 //        testBean.HelloPrint();
 
-        Samosa samosa = context.getBean(Samosa.class);
-        samosa.eatSamosa();
+//        Samosa samosa = context.getBean(Samosa.class);
+//        samosa.eatSamosa();
+//
+//        Person person1= context.getBean(Person.class);
+//        person1.eat();
 
-        Person person1= context.getBean(Person.class);
-        person1.eat();
+
+        Pepsi pepsi = context.getBean(Pepsi.class);
+        System.out.println(pepsi);
+
+        Pepsi pepsi1 = context.getBean(Pepsi.class);
+        System.out.println(pepsi1);
+
+        System.out.println(pepsi.equals(pepsi1));
+
 
 
 
