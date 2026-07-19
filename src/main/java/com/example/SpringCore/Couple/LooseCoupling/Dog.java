@@ -1,9 +1,11 @@
 package com.example.SpringCore.Couple.LooseCoupling;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 //@Primary
-@Component("dog")
+@Component
+@Qualifier("dog")
 public class Dog implements Animal{
 
     @Override

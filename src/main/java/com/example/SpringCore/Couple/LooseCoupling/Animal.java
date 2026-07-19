@@ -1,5 +1,5 @@
 package com.example.SpringCore.Couple.LooseCoupling;
 
-interface Animal {
+public interface Animal {
     void play();
 }

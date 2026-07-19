@@ -1,6 +1,7 @@
 package com.example.SpringCore;
 
 import Test.test;
+import com.example.SpringCore.Couple.LooseCoupling.Animal;
 import com.example.SpringCore.Couple.LooseCoupling.Cat;
 import com.example.SpringCore.Couple.LooseCoupling.Dog;
 import com.example.SpringCore.Couple.LooseCoupling.Person;
@@ -28,7 +29,8 @@ public class SpringCoreApplication {
 
         Person personBean = context.getBean(Person.class);
         personBean.playWithAnimal();
-
+        Animal cat = context.getBean("cat", Animal.class);
+        cat.play();
 
         test testBean= context.getBean(test.class);
         testBean.HelloPrint();
