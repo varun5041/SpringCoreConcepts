@@ -28,7 +28,16 @@ public class SpringCoreApplication {
         /// ////////////////////////////////////
 
         Person personBean = context.getBean(Person.class);
+        personBean.setAnimal(context.getBean(Dog.class));
         personBean.playWithAnimal();
+
+
+
+
+
+
+
+
         Animal cat = context.getBean("cat", Animal.class);
         cat.play();
 
